@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">The Movie</string>
+    <string name="LABEL_BEER">Movie</string>
+    <string name="LABEL_SEARCH">Search</string>
+    <string name="LABEL_FAVORITE">Favorite</string>
+    <string name="COMMON_ERROR_MESSAGE">Fail to get data.\nPlease try again.</string>
+    <string name="POPULAR_MOVIES">Popular Movies</string>
+    <string name="TOP_RATED_MOVIES">Top Rated Movies</string>
+    <string name="NOW_PLAYING_MOVIES">Now Playing Movies</string>
+    <string name="UPCOMING_MOVIES">Upcoming Movies</string>
+    <string name="LABEL_TODAY">Today</string>
+    <string name="LABEL_THIS_WEEK">This week</string>
+    <string name="LABEL_TRENDING">Trending</string>
+    <string name="LABEL_SEE_MORE">See more</string>
+</resources>

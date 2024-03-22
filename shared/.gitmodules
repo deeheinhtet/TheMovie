@@ -1,0 +1,12 @@
+[submodule "core-common"]
+	path = core-common
+	url = git@github.dee:DeeKMMTech/core-common.git
+[submodule "core-ui"]
+	path = core-ui
+	url = git@github.dee:DeeKMMTech/core-ui.git
+[submodule "core-network"]
+	path = core-network
+	url = git@github.dee:DeeKMMTech/core-network.git
+[submodule "core-localdata"]
+	path = core-localdata
+	url = git@github.dee:DeeKMMTech/core-localdata.git
