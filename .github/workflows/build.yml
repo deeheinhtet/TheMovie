@@ -1,38 +1,40 @@
-name: Build
+name: AndroidBuild
 
 on:
-  branches: [ master ]
-  workflow_call:
-    inputs:
-      shouldRunKmp:
-        required: true
-        type: string
-      shouldRunAndroid:
-        required: true
-        type: string
-      shouldRunIos:
-        required: false
-        type: string
+  push:
+    branches: [ master ]
 
 jobs:
-  Android:
-    if: ${{ inputs.shouldRunKmp == 'true' || inputs.shouldRunAndroid == 'true' }}
+
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v3
-        name: Job set up
-        description: Sets up the Java and Gradle
-        runs:
-          using: "composite"
-          steps:
-            - uses: actions/setup-java@v3
-              with:
-                distribution: "adopt"
-                java-version: "11"
+      - name: Checkout
+        uses: actions/checkout@v4.1.0
 
-            - name: Setup Gradle
-              uses: gradle/gradle-build-action@v2
+      - name: Submodule Checkout
+        uses: actions/checkout@v4.1.0
+        with:
+          submodules: recursive
+          token: ${{ github.token }}
 
 
-      - run: ./gradlew :composeApp:build
+      - name: Sets  Java SDK
+        uses: actions/setup-java@v4.2.1
+        with:
+          java-version: "17"
+          distribution : 'adopt'
+
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
+
+      - name: Build with gradle
+        run: ./gradlew :composeApp:build
+
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v4.3.1
+        with:
+          name: AndroidApp.apk
+          path: composeApp/build/outputs/apk/debug/composeApp-debug.apk
+
+
