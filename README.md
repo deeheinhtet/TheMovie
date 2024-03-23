@@ -22,6 +22,13 @@ Firstly need to install [KMMM Android Studio Plugin](https://plugins.jetbrains.c
 * **IOS**
 Firstly need to install XCode. And then open the iosApp.xcodeproj under in iosApp folder like normal ios project. 
 
+After clone the repository, cd project name -> need to update submodule. In terminal,
+<br/>
+ `git submodule init`
+<br/>
+ `git submodule update`
+.
+
 
 ## Architecture
 
