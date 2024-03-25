@@ -1,14 +1,28 @@
+
 [submodule "core-common"]
 	path = shared/core-common
-	url = git@github.com:DeeKMMTech/core-common.git
+	url = https://github.com/DeeKMMTech/core-common.git
 [submodule "core-ui"]
 	path = shared/core-ui
-	url = git@github.com:DeeKMMTech/core-ui.git
+	url = https://github.com/DeeKMMTech/core-ui.git
 [submodule "core-network"]
 	path = shared/core-network
-	url = git@github.com:DeeKMMTech/core-network.git
+		url = https://github.com/DeeKMMTech/core-network.git
 [submodule "core-localdata"]
 	path = shared/core-localdata
-	url = git@github.com:DeeKMMTech/core-localdata.git
+	url = https://github.com/DeeKMMTech/core-localdata.git
 
 
+
+; [submodule "core-common"]
+; 	path = shared/core-common
+; 	url = git@github.com:DeeKMMTech/core-common.git
+; [submodule "core-ui"]
+; 	path = shared/core-ui
+; 	url = git@github.com:DeeKMMTech/core-ui.git
+; [submodule "core-network"]
+; 	path = shared/core-network
+; 	url = git@github.com:DeeKMMTech/core-network.git
+; [submodule "core-localdata"]
+; 	path = shared/core-localdata
+; 	url = git@github.com:DeeKMMTech/core-localdata.git
